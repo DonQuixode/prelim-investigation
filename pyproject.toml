@@ -10,6 +10,7 @@ dependencies = [
   "langchain-typesafe",
   "python-dotenv",
   "ipykernel",
+  "streamlit>=1.66.1",
 ]
 
 [dependency-groups]
