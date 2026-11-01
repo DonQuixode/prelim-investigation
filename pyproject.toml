@@ -1,0 +1,18 @@
+[project]
+name = "prelim-investigation"
+version = "0.1.0"
+description = "Preliminary investigation of LangChain chains and LLM setups."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain",
+  "langchain-openai",
+  "langchain-typesafe",
+  "python-dotenv",
+  "ipykernel",
+]
+
+[dependency-groups]
+dev = [
+  "jupyterlab",
+]
