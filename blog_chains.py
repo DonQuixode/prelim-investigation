@@ -29,12 +29,12 @@ def final_answer(text: str) -> str:
 
 
 SIMPLE_PROMPT = (
-    "Write a 50 word blog for publishing with the following points: {points}"
+    "Write a 200 word blog for publishing with the following points: {points}"
 )
 
 STYLED_PROMPT = (
-    "Write a 50 word blog for publishing. First, make rules based on how this "
-    "example is written: {examples}, then, use those rules alongside these "
+    "Write a 200 word blog for publishing. First, make rules based on how this "
+    "example is written. Use it only for your thinking: {examples}, then, use those rules alongside these "
     "humanizing rules to avoid LLM smells: {humanizing_rules}, and then write on "
     "the topic(s) provided in these points. Do not add features which aren't "
     "present: {points}"
@@ -56,6 +56,8 @@ def build_chains(llm=None):
                          base_url=_env("LLM_BASE_URL", "https://opencode.ai/zen/v1"),
                          api_key=_env("LLM_API_KEY"),
                          temperature=0.7,
+                         timeout=120,
+                         max_retries=0,
                          use_responses_api=False)
 
     simple = (

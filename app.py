@@ -7,7 +7,7 @@ from blog_chains import DEFAULT_EXAMPLES, DEFAULT_HUMANIZING_RULES, build_chains
 st.set_page_config(page_title="Blog Lab", layout="wide")
 
 st.title("Blog Lab")
-st.caption("One set of points, two pipelines. Both write a 50 word blog.")
+st.caption("One set of points, two pipelines. Both write a 200 word blog.")
 
 
 @st.cache_resource
